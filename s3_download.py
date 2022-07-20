@@ -25,9 +25,9 @@ with DAG(...) as dag:
         task_id='download_from_s3',
         python_callable=download_from_s3,
         op_kwargs={
-            'key': 'posts.json',
-            'bucket_name': 'bds-airflow-bucket',
-            'local_path': '/Users/dradecic/airflow/data/'
+            'key': 'bucket-test/bkt-test.txt',
+            'bucket_name': 'sykim-s3-bkt',
+            'local_path': './'
         }
     )
 
