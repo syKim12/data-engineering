@@ -29,7 +29,7 @@ def upload_to_rds() -> None:
     'years_since_last_promotion', 'years_with_curr_manager']
     
     #save csv file in database
-    engine = create_engine('mysql+pymysql://sooyeon:soomysql@sykim-mysql.cyzopmvjcvzw.us-east-1.rds.amazonaws.com:3306/employee?charset=utf8', encoding = "utf-8")
+    engine = create_engine('mysql+pymysql://sooyeon:****@****:3306/employee?charset=utf8', encoding = "utf-8")
     conn = engine.connect()
     df.to_sql(name="performance", con=engine, if_exists='append', index=False)
     conn.close()
